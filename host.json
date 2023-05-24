@@ -1,20 +1,15 @@
 {
   "version": "2.0",
+  "logging": {
+    "logLevel": {
+      "default": "Debug"
+    }
+  },
   "customHandler": {
     "description": {
-      "defaultExecutablePath": "/home/site/wwwroot/funqy-azure-example-runner"
-    }
-  },
-  "logging": {
-    "applicationInsights": {
-      "samplingSettings": {
-        "isEnabled": true,
-        "excludedTypes": "Request"
-      }
-    }
-  },
-  "extensionBundle": {
-    "id": "Microsoft.Azure.Functions.ExtensionBundle",
-    "version": "[2.*, 3.0.0)"
+      "defaultExecutablePath": "funqy-azure-example-runner",
+      "arguments": []
+    },
+    "enableForwardingHttpRequest": false
   }
 }
