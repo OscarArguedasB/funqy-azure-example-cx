@@ -8,6 +8,7 @@
   "customHandler": {
     "description": {
       "defaultExecutablePath": "funqy-azure-example-runner",
+      "workingDirectory": "",
       "arguments": []
     },
     "enableForwardingHttpRequest": false
