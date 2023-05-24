@@ -59,3 +59,7 @@ Start your Funqy functions using HTTP
 
 [Related guide section...](https://quarkus.io/guides/funqy-http#get-query-parameter-mapping)
 
+RESOURCE_ID=$(az group show --name funqy-rg --query id -o tsv)
+SPNAME="sp-$(az functionapp list --resource-group funqy-rg  --query '[].name' -o tsv)"
+az ad sp create-for-rbac --name "${SPNAME}" --role contributor --scopes "$RESOURCE_ID" --sdk-auth
+
