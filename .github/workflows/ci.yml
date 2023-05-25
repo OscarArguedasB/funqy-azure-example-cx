@@ -57,5 +57,5 @@ jobs:
           app-name: 'testjava-oscar'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0D55FB92497747F9A5EF391B1A247512 }}
-          package: '${{ env.PACKAGE_DIRECTORY }}'
+          package: /home/runner/work/funqy-azure-example/funqy-azure-example/funqyhttptrigger.zip
           respect-pom-xml: true
