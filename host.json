@@ -1,16 +1,11 @@
 {
   "version": "2.0",
-  "logging": {
-    "logLevel": {
-      "default": "Debug"
-    }
-  },
   "customHandler": {
     "description": {
       "defaultExecutablePath": "funqy-azure-example-runner",
       "workingDirectory": "",
       "arguments": []
     },
-    "enableForwardingHttpRequest": false
+    "enableForwardingHttpRequest": true
   }
 }
