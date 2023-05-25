@@ -10,7 +10,7 @@ variable "AZ_RESOURCE_GROUP" {
 
 variable "AZ_FUNCTION_NAME_APP" {
   description = "The name of the application running functions"
-  default = "funqy-azure-example-runner"
+  default = "funqyhttptrigger"
 }
 
 variable "AZ_STORAGE_NAME" {
