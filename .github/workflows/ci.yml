@@ -51,13 +51,12 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R
   
-      - name: Azure Login
-        uses: azure/login@v1
+      - name: 'Run Azure Functions Action'
+        uses: Azure/functions-action@v1
+        id: fa
         with:
-          creds: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
-      
-      -  name: Deploy to Azure
-         uses: Azure/functions-action@v1
-         with:
-            app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-            package: /home/runner/work/funqy-azure-example/funqy-azure-example/funqyhttptrigger.zip
+          app-name: 'testjava-oscar'
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0D55FB92497747F9A5EF391B1A247512 }}
+          package: '${{ env.PACKAGE_DIRECTORY }}'
+          respect-pom-xml: true
