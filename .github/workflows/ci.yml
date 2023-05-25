@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: function-zip
-          path: target/funqy-azure-example.zip
+          path: target/funqyhttptrigger.zip
 
   deploy:
       needs: build
@@ -60,4 +60,4 @@ jobs:
          uses: Azure/functions-action@v1
          with:
             app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-            package: /home/runner/work/funqy-azure-example/funqy-azure-example/funqy-azure-example.zip
+            package: /home/runner/work/funqy-azure-example/funqy-azure-example/funqyhttptrigger.zip
